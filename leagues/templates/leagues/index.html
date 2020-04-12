@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sports Leagues</title>
+	</head>
+	<body>
+		<h1>Baseball Leagues</h1>
+		<ol>
+			{% for baseball in baseball_leagues %}
+				<li>{{baseball.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Women's Leagues</h1>
+		<ol>
+			{% for woman in womens_leagues %}
+				<li>{{woman.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Hockey Leagues</h1>
+		<ol>
+			{% for hockey in hockey_leagues %}
+				<li>{{hockey.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Leagues other than Football</h1>
+		<ol>
+			{% for other in other_than_football %}
+				<li>{{other.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Conference Leagues</h1>
+		<ol>
+			{% for conference in conference_leagues %}
+				<li>{{conference.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Atlantic Regions</h1>
+		<ol>
+			{% for atlantic in atlantic_leagues %}
+				<li>{{atlantic.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Dallas Teams</h1>
+		<ol>
+			{% for dallas in dallas_teams %}
+				<li>{{dallas.location}} {{dallas.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Raptors Teams</h1>
+		<ol>
+			{% for raptor in raptor_teams %}
+				<li>{{raptor.location}} {{raptor.team_name}}</li>	
+			{% endfor %}
+		</ol>
+		<h1>City Teams</h1>
+		<ol>
+			{% for city in city_teams %}
+				<li>{{city.location}} {{city.team_name}}</li>	
+			{% endfor %}
+		</ol>
+		<h1>Teams that start with T </h1>
+		<ol>
+			{% for tee in t_teams %}
+				<li>{{tee.location}} {{tee.team_name}}</li>	
+			{% endfor %}
+		</ol>
+		<h1>Teams A-Z by Location</h1>
+		<ol>
+			{% for alpha in alpha_teams %}
+				<li>{{alpha.location}} {{alpha.team_name}}</li>	
+			{% endfor %}
+		</ol>
+		<h1>Teams Z-A by Team Name</h1>
+		<ol>
+			{% for alpha_rev in alpha_teams_rev %}
+				<li>{{alpha_rev.team_name}}, {{alpha_rev.location}} </li>	
+			{% endfor %}
+		</ol>
+		<h1>Players with the Last Name Cooper</h1>
+		<ol>
+			{% for cooper in cooper_players %}
+				<li>{{cooper.first_name}} {{cooper.last_name}}</li>	
+			{% endfor %}
+		</ol>
+		<h1>Players with the First Name Joshua</h1>
+		<ol>
+			{% for josh in joshua_players %}
+				<li>{{josh.first_name}} {{josh.last_name}}</li>	
+			{% endfor %}
+		</ol>
+		<h1>Players with the Last Name Cooper and NOT the First Name Joshua</h1>
+		<ol>
+			{% for coop in cooper_not_josh %}
+				<li>{{coop.first_name}} {{coop.last_name}}</li>	
+			{% endfor %}
+		</ol>
+		<h1>Players with the First Name Alexander or Wyatt</h1>
+		<ol>
+			{% for alex_wyatt in alex_or_wyatt %}
+				<li>{{alex_wyatt.first_name}} {{alex_wyatt.last_name}}</li>	
+			{% endfor %}
+		</ol>
+	</body>
+</html>
